@@ -22,7 +22,7 @@ Once you are done, bundle the git repository into a file by typing `git bundle c
 
 ## Task
 
-Create a UI for displaying search results from multiple sources, e.g.[wikipedia](https://en.wikipedia.org/w/api.php?action=query&list=search&utf8=&format=json&srsearch=QUERY) or [duckduckgo](http://api.duckduckgo.com/?q=QUERY&format=json).
+Create a single page app for displaying search results from multiple sources, e.g.[wikipedia](https://en.wikipedia.org/w/api.php?action=query&list=search&utf8=&format=json&srsearch=QUERY) or [duckduckgo](http://api.duckduckgo.com/?q=QUERY&format=json).
 You can use any other apis like bing, google etc..
 
 You should make sure that any API you use is not called more than once per second.
