@@ -18,6 +18,7 @@ Any documentation you create should be in this repository and in text or markdow
 
 Use `git` as you would in a project, make small, meaningful __commits__ - and it's totally ok if you later on change stuff again, you don't need to create a cleansed, linear history.
 To begin clone the repo by `git clone https://bitbucket.org/K15t/frontend-candidate-search.git`.
+Then add your work using `git add` and `git commit` as usual.
 Once you are done, bundle the git repository into a file by typing `git bundle create candidate-search.bundle master` and send it to us via email.
 
 ## Task
