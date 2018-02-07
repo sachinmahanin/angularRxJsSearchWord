@@ -1,0 +1,33 @@
+ 
+
+
+<div style="margin-top: 7px;">
+ 
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3">
+        <div class="input-group custom-search-form">
+          <div class="input-group custom-search-form">
+            <input type="text" [formControl]="term" placeholder="Enter search term" />
+          </div>
+          <!-- /input-group -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3">
+        <ul>
+
+          <li *ngFor="let item of items|async ">{{item}}</li>
+
+
+        </ul>
+      </div>
+    </div>
+  </div>
+
+ 
