@@ -9,6 +9,7 @@ import 'rxjs/add/operator/switchMap';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { of } from 'rxjs/observable/of';
 
+
 @Component({
   selector: 'word-search',
   templateUrl: 'wordSearch.component.html',
@@ -18,7 +19,8 @@ import { of } from 'rxjs/observable/of';
 
 })
 export class WordSearchComponent {
-
+  
+  searchSummary:string = '';
   query: string = '';
   suggestionList: any[] = [];
   elementRef: ElementRef;
@@ -54,6 +56,10 @@ export class WordSearchComponent {
       if (response2 != "" && typeof response2 != "undefined")
         tempResult = tempResult.concat(response2);
       this.result = tempResult;
+      if(tempResult.length==0 && this.query!="")
+        this.searchSummary=" No results found :(";
+      else
+      this.searchSummary="";
       this.items = of(this.result);
     });
 

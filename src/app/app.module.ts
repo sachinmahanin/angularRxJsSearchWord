@@ -5,10 +5,7 @@ import { HttpModule ,JsonpModule} from '@angular/http';
 import { AppComponent } from './app.component';
  
 import { SearchService } from './core/search.service';
-  
 import { GoogleAutocompleteService } from './core/googleAutocomplete.servise';
-
-
 import { WordSearchComponent } from './search/word-search.component'
  
  @NgModule({
