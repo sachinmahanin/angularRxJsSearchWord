@@ -1,7 +1,7 @@
 import { ISearchService } from '../shared/interfaces';
 import { Observable } from 'rxjs/Observable';
 import { URLSearchParams, Jsonp, Response } from '@angular/http';
- 
+import { of } from 'rxjs/observable/of';
 
 export class duckduckgoSearch implements ISearchService
  {
@@ -40,8 +40,9 @@ export class duckduckgoSearch implements ISearchService
       catch (err) {
         errMessage = error.statusText;
       }
-      return Observable.throw(errMessage);
+      console.log(errMessage,error)
+    
     }
-    return Observable.throw(error || "server error");
+    return of({});
   }
 }  

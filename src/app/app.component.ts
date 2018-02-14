@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { WordSearchComponent } from './search//word-search.component'
+import { WordSearchComponent } from './search/word-search.component'
 import { SearchService } from './core/search.service';
 @Component({
   selector: 'app-root',

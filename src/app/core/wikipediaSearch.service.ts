@@ -2,7 +2,7 @@ import { ISearchService } from '../shared/interfaces';
 import { Observable } from 'rxjs/Observable';
 import { URLSearchParams, Jsonp, Response } from '@angular/http';
 import { identifierModuleUrl } from '@angular/compiler';
-
+import { of } from 'rxjs/observable/of';
 export class wikipediaSearch implements ISearchService {
 
 
@@ -28,16 +28,18 @@ export class wikipediaSearch implements ISearchService {
     private handleError(error: any) {
         console.error('Server Error :', error);
         if (error instanceof Response) {
-            let errMessage = '';
-            try {
-                errMessage = error.json().error;
-
-            }
-            catch (err) {
-                errMessage = error.statusText;
-            }
-            return Observable.throw(errMessage);
+          let errMessage = '';
+          try {
+            errMessage = error.json().error;
+    
+          }
+          catch (err) {
+            errMessage = error.statusText;
+          }
+          console.log(errMessage,error)
+        
         }
-        return Observable.throw(error || "server error");
-    }
+        return of({});
+      }
+     
 }  

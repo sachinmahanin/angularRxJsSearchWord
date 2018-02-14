@@ -1,34 +1,31 @@
-# Candidate search
+# K15T
 
-This is your chance to showcase your frontend engineering skills on a small project.
+This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.28.3.
 
-Please be aware that this engineering showcase is not just a programming exercise. You should make sure that we get an idea of how you tackle a real-life task.
-To do so describe what you did and what you decided with regard to
+## Development server
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-- requirements / assumptions
-- technical concepts and technology choice
-- programming
-- tests
-- deployment / building (including how we should build the project)
-- technical documentation
+## Code scaffolding
 
-We are aware that the time for this task is limited and you don't have to go into excruciating detail, but two or three concise lines per topic will make our impression much clearer. Feel free to add other things that you want to communicate.
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
 
-Any documentation you create should be in this repository and in text or markdown format, don't send us Microsoft Word files or likewise. Start with a index.md document and either put everything into that file or point to other files from there.
+## Build
 
-Use `git` as you would in a project, make small, meaningful __commits__ - and it's totally ok if you later on change stuff again, you don't need to create a cleansed, linear history.
-To begin clone the repo by `git clone https://bitbucket.org/K15t/frontend-candidate-search.git`.
-Then add your work using `git add` and `git commit` as usual.
-Once you are done, bundle the git repository into a file by typing `git bundle create candidate-search.bundle master` and send it to us via email.
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
 
-## Task
+## Running unit tests
 
-Create a single page app for displaying search results from *multiple* sources, e.g.[wikipedia](https://en.wikipedia.org/w/api.php?action=query&list=search&utf8=&format=json&srsearch=QUERY) or [duckduckgo](http://api.duckduckgo.com/?q=QUERY&format=json).
-You can use any other apis like bing, google etc.. Make sure to integrate at least two APIs.
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-While you type in the search field, you should get suggestions of what you might want to type (typeahead) - like on google.com. You should make sure that any API you use is not called more than once per second.
+## Running end-to-end tests
 
-There is a UI spec candidatesearch_spec/index.html file to give you an idea of what the result should look like.
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Before running the tests make sure you are serving the app via `ng serve`.
 
-We recommend you to use create-react-app, but you can start from scratch if you want to use something different.
-Tests are recommended.
+## Deploying to GitHub Pages
+
+Run `ng github-pages:deploy` to deploy to GitHub Pages.
+
+## Further help
+
+To get more help on the `angular-cli` use `ng help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

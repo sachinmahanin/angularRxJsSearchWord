@@ -1,33 +1,33 @@
- 
+
+
 
 
 <div style="margin-top: 7px;">
- 
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-3">
-        <div class="input-group custom-search-form">
-          <div class="input-group custom-search-form">
-            <input type="text" [formControl]="term" placeholder="Enter search term" />
-          </div>
-          <!-- /input-group -->
-        </div>
-      </div>
-    </div>
-  </div>
+  <input [formControl]="term" type="text" class="form-control input-list" [(ngModel)]="query"
+   (keyup)="filter($event)" placeholder="Enter the search term">
 
 
+  <ul id="list-group" class="list-group group-list" *ngIf="suggestionList.length > 0">
+    <li *ngFor="let item of suggestionList" [class.active]="item.selected" [id]="item.selected" class="list-group-item item-list"
+      (click)="select(item)">
+      {{ item.name }}
+    </li>
+  </ul>
+</div>
+<div style="margin-top: 7px;">
   <div class="container">
     <div class="row">
       <div class="col-lg-3">
         <ul>
-
           <li *ngFor="let item of items|async ">{{item}}</li>
-
-
         </ul>
       </div>
     </div>
   </div>
-
- 
+  <div *ngIf="result.length < 1 && query!=''">
+    <hr>
+    <p>
+      No results found :(
+    </p>
+  </div>
+</div>
